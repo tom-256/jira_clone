@@ -16,3 +16,9 @@ The API codebase is fairly simple and should be easy enough to understand.
 | `src/middleware`  | Middleware functions can modify request and response objects, end the request-response cycle, etc. For example `authenticateUser` method verifies the authorization token and attaches `currentUser` to the request object. |
 | `src/serializers` | Serializers transform the data fetched from the database before it's sent to the client.                                                                                                                                    |
 | `src/utils`       | Utility(helper) functions that are used in multiple places across the codebase. For example `utils/typeorm.ts` functions help us validate data and avoid writing repetitive code.                                           |
+
+
+```
+docker run --name mydb -e POSTGRES_PASSWORD=test -e POSGRES_USER=test -e POSTGRES_DB=jira_development -p 5432 -d postgres
+docker exec -it mydb /bin/bash
+```
